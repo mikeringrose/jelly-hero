@@ -1,38 +1,11 @@
+<!DOCTYPE html>
 <html>
-<head>
-    <title>Jelly Hero</title>
-    <style type="text/css">
-        body {
-            padding: 0;
-            margin: 0;
-        }
+  <head>
+    <title>Shapes</title>
+    <script type="text/javascript" data-main="app/javascripts/main.js" src="libs/require.js"></script>
+  </head>
 
-        canvas {
-            overflow: hidden;
-        }
-    </style>
-    <script type="text/javascript" src="lib/jquery/jquery-1.7.2.min.js"></script>
-    <script type="text/javascript" src="lib/underscore/underscore-min.js"></script>
-    <script type="text/javascript" src="lib/sylvester/sylvester.js"></script>
-    <script type="text/javascript" src="js/jellyhero.js"></script>
-    <script type="text/javascript" src="js/engine.js"></script>
-    <script type="text/javascript" src="js/level.js"></script>
-    <script type="text/javascript" src="js/jellybob.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function() {
-            var canvas = $('canvas').get(0),
-                context = canvas.getContext('2d'),
-                level = new jellyhero.Level({ context: context, bgImage: 'img/background.png' }),
-                jellyBob = new jellyhero.JellyBob({ context: context, level: level }),
-                engine = new jellyhero.Engine([level, jellyBob]);
-
-                level.hero = jellyBob;
-
-                engine.run();
-        });
-    </script>
-</head>
-<body>
-    <canvas width="960" height="640"></canvas>
-</body>
+  <body>
+    <canvas id="mycanvas"></canvas>
+  </body>
 </html>
